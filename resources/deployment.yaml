@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: compute
+  labels:
+    app: compute
+spec:
+  selector:
+    matchLabels:
+      app: compute
+  replicas: 1
+  template:
+    metadata:
+      name: compute
+      labels:
+        app: compute
+    spec:
+      containers:
+      - name: computation
+        image: gcr.io/core-cascade-340011/compute
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 5000
+            protocol: TCP
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+    

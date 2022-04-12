@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: compute-load
+  #annotations:
+    #cloud.google.com/neg: '{"exposed_ports": {"8080":{}}}'
+spec:
+  type: LoadBalancer
+  selector:
+    app: compute
+  ports:
+    - name: compute-port
+      protocol: TCP
+      port: 80
+      targetPort: 5000
