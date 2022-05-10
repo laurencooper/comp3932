@@ -1,8 +1,3 @@
-"""
-
-This Molotov script has 2 scenario
-
-"""
 from molotov import scenario
 
 
