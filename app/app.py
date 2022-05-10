@@ -2,8 +2,8 @@ from flask import Flask, jsonify
 
 app= Flask(__name__)
 
-
-#https://www.geeksforgeeks.org/calculate-pi-with-python/ 
+#Pi Calculator source code taken from https://www.geeksforgeeks.org/calculate-pi-with-python/ 
+#Pradipta Mukherjee, 2021, Calculate Pi With Python, GeeksforGeeks, viewed 2 February 2022, https://www.geeksforgeeks.org/calculate-pi-with-python/  
 
 
 @app.route("/")
